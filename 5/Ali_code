@@ -1,0 +1,157 @@
+customer_name_list = ["ali", "arbaz", "john", "David"]
+products= ["rice", "milk", "banana", "apple"]
+
+prices= [20, 30, 40, 50]
+customer_winner = []
+total_value = []
+stock = [5,5,5,5]
+prod_len=len(products)
+new_name_list = []
+new_product_list = []
+ordered_list = []#.................
+
+
+
+def add_new_purchase():
+    
+    customer_name = input("Enter customer's name :")     
+    ordered_list.append(customer_name)#..............................
+    product_dictonary = {}   #....................................
+    
+    counter2 = 'start' #....................
+    while counter2 != "exit":     #.........................
+        
+          
+        product_name = input("Enter the name of the product :")
+    
+        while product_name not in products:
+            print('invalid product please enter again')       
+            product_name = input("Enter the name of the product :")
+
+
+        print(f"Please Enter the quantity of the {product_name} you want :")
+
+        product_quantity = int(input())
+        index_of_product = products.index(product_name)
+        if product_quantity > stock[index_of_product]:
+            print("You can't order this product . Not much stock available \n")
+            return
+        else:
+
+            index = products.index(product_name)
+            print('index:  ',index)
+
+            price = prices[index]
+
+            print('price: ',price)
+
+            if price == None:
+                print("This product cannot be sold it hasn't price \n")
+            else:
+
+                #product_dictonary = {}   #....................................
+
+                if customer_name in customer_name_list:
+                    print("This customer exist in our list \n")
+
+
+                    total_bill = int(price) * product_quantity
+                    discount = int(total_bill * 0.1)
+                    total_bill -= discount
+                    print(f"{customer_name} purchased {product_quantity} x {product_name} ")
+                    
+                    print('product_name: ',product_name)
+
+                    product_dictonary[str(product_name)] = product_quantity #...........................
+
+                    print(f" unit price : {prices  [index]} \ntotal price :{total_bill}\n")
+                    print(f"product name \t\t product price \n")
+                else:
+                    print("This customer doesn't exist in our list \n")
+                    if int(price) == 0:
+                        print("You cannot order this product, price is free\n")
+                    else:
+                        customer_name_list.append(customer_name)
+                        print(f" the updated customer list : {customer_name_list} \n")
+                        total_bill = int(price) * product_quantity
+                        print(f"{customer_name} purchased {product_quantity} x {product_name} ")
+                        
+                        print('product_name: ',product_name)
+
+                        product_dictonary[str(product_name)] = product_quantity #...........................
+
+                        print(f" unit price : {prices  [index]} \ntotal price :{total_bill}\n")
+                        print(f"product name \t\t product price \n")
+                
+        counter2 = input("Enter exit to finish the order: ")#............................
+            
+    
+
+        # for ame in customer_name_list:
+        #  indexname=customer_name_list.index(customer_name)
+        #  seque = [[customer_name_list[indexname],products[indexname],product_quantity]]
+        #  print(seque)
+        #
+        #cal_pursash(customer_name,product_name,product_quantity)
+        # if customer_name in customer_name_list:
+        #     seque.append(customer_name)
+        #     indexname=customer_name_list.index(customer_name)
+        #     seque.append(products[indexname])
+        #     seque.append(product_quantity)
+        # print(seque)
+        print("....................")
+        new_total = total_bill
+        if customer_name in customer_winner:
+            index2 = customer_winner.index(customer_name)
+            value = total_value[index2]
+            total_value[index2] = value + total_bill
+        else:
+            customer_winner.append(customer_name)
+            new_total += total_bill
+            total_value.append(new_total)
+        for i, j in zip(customer_winner, total_value):
+            print("{0} = {1}".format(i, j))
+    
+    ordered_list.append(product_dictonary)#..............................
+        
+
+
+
+
+
+
+#####################################( This funcation end here )#############
+# when you need to print the total order of all the customers then call the funcation blow
+
+
+
+def print_all_orders():
+
+    #....................................Displaying the product..................
+    print("\n........All the order........... \n")
+    print('Name', end='   ')
+    for i in products:
+        print(i, end='    ')  #print the product name on the same line
+
+    print('')     #new line
+
+    #getting the customer name and order from the ordered_list
+    for i in range(0,len(ordered_list),2):
+
+        customer_name = ordered_list[i]     #it is getting the customer name form the dictonary
+        print(customer_name, end='  ')
+
+        for j in products:        
+            orders = ordered_list[i+1].get(j)     #it is getting the product quantaty from the dictonary that is in the ordered_list
+            #print(orders)
+            #displaying the product
+            if orders is None:
+                orders = 0
+                print(int(orders), end='        ')
+            else:
+                print(int(orders), end='        ')
+
+        print('')
+        
+
+

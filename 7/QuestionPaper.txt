@@ -1,0 +1,53 @@
+# Programming assignment 4 (pa04)
+---
+Recursive case: To solve the maze, just solve the maze.
+
+Base case: When are you done?
+
+Condition/check: How to detect if you are done?
+
+## What is this repository?
+The files listed here are the starting point for your assignment. 
+Only add source files (not compiled files) to the Git repository.
+
+## Assignment description
+Help Niobe navigate through the matrix of service tunnels outside the matrix by creating a navigation system to find a path through this maze.
+Your job is to write a program that finds, for every map, a path from wherever you are to the exit.
+You can move in any of the four cardinal directions (North, East, West and South).
+No diagonal moves are possible.
+You must use recursive backtracking to solve the maze to get credit.
+Print each map with a path from the "Start" point to the "Exit".
+Mark the path using a trail of the character '@'. 
+Follow the format as in the sample output.
+Mazes may or may not have a solution, and there may be loops or islands in the maze, though all that are inputted will be valid enclosed mazes, and Niobe will always exist once in each maze.
+There will be no "rooms", but only tunnels (1-wide gaps).
+See the hints below! 'N' is Niobe, and 'E' is exit. 
+
+![maze](maze.jpg)
+
+## Input/Output
+These are both specified in the `stdio_tests/*` files provided in your repository. 
+
+* Input is all via **standard input**: 
+  https://en.wikipedia.org/wiki/Standard_streams 
+  (use \<filein.txt and \>fileout.txt as described in the syllabus).
+* The general form of input is here:
+```
+<number of rows>
+<maze>
+<number of rows>
+<maze>
+0
+```
+Ending the game: a row of 0 should terminate your program.
+
+## Requirements
+You **must** use recursion, and **no** you can't use `a*` until you take our AI course.
+
+## Unit tests
+* Run the following on your local machine, while your working director is your repo:
+  `./grade.sh`
+
+* Alternatively, they will be automatically run for you. 
+  In git-classes, just click on CI/CD -> Jobs -> pass/fail. 
+  Note: actually click on the pass or fail button to see why.
