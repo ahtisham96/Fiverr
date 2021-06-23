@@ -1,0 +1,7 @@
+I will create text game which contains 8 rooms. 
+The user can move into any room. 
+In one room there will be a guessing entity. 
+You have to guess this entity. 
+There are total 4 attempts by using them you can guess the entity is in this room. 
+If all the attempts were wrong then you will lose the game. 
+The guessing entity will changed every time when the game will run.

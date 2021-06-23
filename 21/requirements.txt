@@ -1,0 +1,1 @@
+Write a bash script that will removes the duplicate identities from the file
