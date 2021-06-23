@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathabx}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{graphicx}
+\newcommand{\RN}[1]
+{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\title{Hannah Lunnon, Software Engineering, 1125159}
+
+\begin{document}
+
+\maketitle
+\begin{center}
+ \includegraphics{usqlogo.png}\\[1cm] 
+\end{center}
+\section{Biography}
+My name is Hannah, I was born in the United states and graduated high school before moving to Australia and studying my Bachelor of Information Technology. I have always been interested in researching software development as well as learning the inner workings of a computer.
+\section{Course}
+So far for the semester we will cover the use of LaTeX and incorporating it into our programming skills for your future careers as well as the use of different programming shells and their benefits or disadvantages to doing various tasks.
+
+\subsection{Text for Subsection with Maths}
+This semester, we will be studying dilemmas. One dilemma is the constructive dilemma.\\
+The constructive dilemma rule can be stated as shown in Equation 1:
+\begin{center}
+\begin{tabular}{ c }
+%\[
+(P → Q), (R → S), P \RN{5} R \\
+\hline
+%\] 
+\therefore Q $\bigwedge$ S
+\end{tabular}
+\end{center}
+In other words, if P implies Q and R implies S and either P or R is true,
+then either Q or S has to be true.\\\\
+Eq2.  the study of software project estimation, the Software Equation is a model with multiple variables based on assumptions of a specific distribution of effort throughout the entire length of a software development project.\\ \\ \\
+\begin{center}
+E=  $(\frac{LOC.B^{(\frac{1}{3})}}{P})^3$ \ \ . $(\frac{1}{t^4})$ 
+\\
+\end{center}
+
+\subsection{Text for Subsection with Table}
+We will also be studying some tools used in software engineering. Some of
+them are listed in Table 1.
+\\ \\
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+\hline
+Category & \multicolumn{2}{|c|}{Tool} \\ \cline{2-3}
+ & Command & Description \\ \cline{1-3}
+ Editor & emacs & Emacs extensible text editor \\
+ & vi & Visual Editor \\ \cline{1-3}
+ Scripting & bash & GNU Bourne-Again SHell \\ 
+ & perl & Practical Extract and Report Language \\ \cline{1-3}
+ Document & git & Distributed Revison Control \\
+ Management & LATEX & Document Typesetting Package \\
+ & make & Managing Project Utility \\
+\hline
+\end{tabular}
+\\ 
+\caption{Table 1: Some Linux Utilities}
+\end{center}
+
+\end{document}

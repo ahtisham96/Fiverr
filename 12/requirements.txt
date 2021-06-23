@@ -1,0 +1,15 @@
+Hello, i hope you're doing well ! i have a shell project (amateur) that's why i need commented and clear lines if you can please Here's what i need and let me know what you think :
+
+
+Creation of a shell application allowing to:
+• display the name of the package of which a command / file is part via the -i option « nom_fichier »
+• List the components of a package via the -I « nom_package » option
+• Display a description of the package using the -d option
+• save only the names of installed packages in a file named packages_distribution_date.txt via the -s option
+-the -h or -help option to display the help from a text file containing the description of the application and its options (the file must be in the directory)
+-the -g option to display a graphical menu (example via YAD)
+-the -m option to display a text menu (loop menu)
+-the -v option displays the verion and the names of the authors
+-o option -o FILE to display the names of the packages installed in a file passed as an argument (if the file does not exist, an error message must be displayed)
+-the option -f KEYWORD to display lines containing KEYWORD from a file. This option must be used with the -o option
+• Display an error message if no argument is passed to the script

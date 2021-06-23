@@ -1,0 +1,24 @@
+Hi
+
+I need a script that backups a folder and send it to an aws s3 bucket with the following folder structure (the script needs to create the folders)
+then delete the local zip file or tar.gz
+
+backups/
+date/
+time.zip
+
+how much would it be?
+
+Thanks
+
+
+______________________________________________________________________________________________________________________________________________
+
+Hi
+
+maybe i didn't explain well,
+I need the script to create e date/time.gz i.e. backupfolder/2021-05-22/230104.gz
+
+i'll run it multilpe times per day, and i need to save all of them
+
+can you make that change?
