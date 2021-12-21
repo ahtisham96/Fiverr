@@ -1,0 +1,10 @@
+# block files which needs to be hidden
+<Files ~ "\.(env|env.test|gitignore|gitattributes)|composer.json|composer.lock|composer.phar|docker-compose.yml|symfony.lock|azure-pipelines.yml|README.md|phinx.yml$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^site_1/admin$ site_2/formula.php [NC,QSA,L]
+

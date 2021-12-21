@@ -1,0 +1,36 @@
+Write a script which for any name given as an argument -- either first name
+or surname -- prints the list of paths to home directories of
+system users with this name. Example:
+$ shownames jakub anna
+/home/users/jakubo
+/home/students/j_luczka
+/home/students/kubeusz
+/home/students/jakub5z
+/home/students/qwertinx
+/home/users/lazinska
+/home/students/annalaz
+Write a script which pauses the session for the number of seconds given as argument,
+and then displays the total size of all files whose names were removed from the current
+directory.
+Example:
+$ watchdir 60
+# sleeping for a while ...
+removed files total size 2345
+Write a script which takes a PID as an argument and prints PID's of all its GRANDchildren and grandgrandchildren.
+Example:
+$ printthem 3545
+3547
+3548
+3666
+
+Write a script which for each directory given on standard input (in a separate line)
+prints the user with the largest number of files in this directory.
+Example:
+$ thewinneris << STOP
+> /etc
+> /tmp
+> /home/users/jakubo
+> STOP
+root
+killertrashman
+jakubo

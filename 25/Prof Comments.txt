@@ -1,0 +1,9 @@
+Script 1, does not do what is suggested in the example. 
+Why not grep the /etc/passwd file for the first names and surnames and get the home dir name from there?
+
+Script 2, you seems to take the right path, but I would expect to save not only the file sizes but also their names;
+after waking up just see which files are no longer there
+
+Script 3, read carefully grandchildren and great-grandchildren are only processes you want to spoil
+
+script 4, does not seem to display any user login names; do not expect a STOP string literally, here-document is used just as an example.

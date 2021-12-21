@@ -1,0 +1,12 @@
+27.zip
+file1_name.txt
+file1_size.txt
+file_name.txt
+file_size.txt
+project1.txt
+task_01.sh
+task_02.sh
+task_03.sh
+task_04.sh
+test
+test.sh
